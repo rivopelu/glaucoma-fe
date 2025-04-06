@@ -140,16 +140,16 @@ export function HomePage() {
             </p>
           </div>
           <div className='mt-6'>
-            <p className='font-semibold text-4xl'>Tentang Aplikasi Ini          </p>
+            <p className='font-semibold text-4xl'>Tentang Web Ini          </p>
             <p>
-              Aplikasi ini merupakan demo dari model klasifikasi glaucoma menggunakan arsitektur deep learning ResNet50. Model ini dilatih untuk mengidentifikasi dan mengklasifikasikan kondisi mata berdasarkan citra fundus (gambar retina) ke dalam beberapa kategori, termasuk tahap awal (early stage) glaucoma. Tujuan dari aplikasi ini adalah untuk membantu eksplorasi dan pemahaman teknologi deteksi dini glaucoma menggunakan kecerdasan buatan.
+              Aplikasi ini merupakan demo dari model klasifikasi glaucoma menggunakan arsitektur deep learning EfficientNetB0. Model ini dilatih untuk mengidentifikasi dan mengklasifikasikan kondisi mata berdasarkan citra fundus (gambar retina) ke dalam beberapa kategori, termasuk tahap awal (early stage) glaucoma. Tujuan dari aplikasi ini adalah untuk membantu eksplorasi dan pemahaman teknologi deteksi dini glaucoma menggunakan kecerdasan buatan.
 
             </p>
           </div>
 
 
           <div>
-            <h1 className=' text-3xl mt-10 font-semibold'>Contoh Gambar Retina</h1>
+            <h1 className=' text-3xl mt-10 font-semibold'>Contoh Gambar </h1>
             <p>Berikut adalah contoh gambar retina dari dataset yang digunakan. Gambar ini digunakan untuk melatih dan menguji performa model prediksi:
             </p>
             <div className='grid grid-cols-2 my-10 gap-4'>
@@ -157,7 +157,7 @@ export function HomePage() {
                 <CardBody className='flex gap-4 items-center'>
                   <img className='w-40 aspect-square' src='/assets/gl_1.png' />
                   <div>
-                    <p className='font-semibold text-3xl '>Retina Normal</p>
+                    <p className='font-semibold text-3xl '> Normal</p>
                     <p className='text-gray-600 text-xl '> Tidak ditemukan tanda-tanda glaucoma.</p>
                   </div>
 
@@ -167,7 +167,7 @@ export function HomePage() {
                 <CardBody className='flex gap-4 items-center'>
                   <img className='w-40 aspect-square' src='/assets/gl_1.png' />
                   <div>
-                    <p className='font-semibold text-3xl '>Retina dengan Glaucoma</p>
+                    <p className='font-semibold text-3xl '>dengan Glaucoma</p>
                     <p className='text-gray-600 text-xl '>Tampak perubahan pada optic disc yang menjadi indikasi glaucoma.</p>
                   </div>
 
