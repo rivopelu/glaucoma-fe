@@ -2,8 +2,8 @@ import * as React from 'react';
 import { useRef, useState } from 'react';
 import Button from '../components/Button.tsx';
 import { Card, CardBody } from '../components/Card.tsx';
-import { SpinnerLoading } from '../components/SpinnerLoading.tsx';
 import PageContainer from '../components/PageContainer.tsx';
+import { SpinnerLoading } from '../components/SpinnerLoading.tsx';
 
 interface IRes {
   confidence: number;
@@ -116,7 +116,7 @@ export function HomePage() {
 
   return (
     <div className={'min-h-screen w-screen bg-gray-100 grid'}>
-      <div className='bg-primary-main h-full flex items-center justify-center'>
+      <div className='bg-primary-main py-10 h-full flex items-center justify-center'>
         <PageContainer >
           <div className='mt-top-bar-height flex items-center gap-4 justify-center'>
             <img src='/assets/home_img.svg' className='h-42' />
@@ -130,6 +130,25 @@ export function HomePage() {
       </div>
       <PageContainer>
         <div className={'p-16 grid  gap-4 pt-24'}>
+          <p className='font-semibold text-4xl'>Judul 1</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+          <div className='flex items-center justify-between my-10 gap-7'>
+            {
+              Array.from({ length: 4 }).map((_, i) => (
+                <Card key={i}>
+                  <CardBody className='grid gap-2'>
+                    <img className='h-52' src='/assets/gl_1.png' />
+                    <p className='font-semibold text-center'>Judul 3</p>
+                    <p className='text-gray-600 text-center'>Description 1</p>
+                  </CardBody>
+                </Card>
+              ))
+            }
+
+          </div>
+
           <div>
             <Card>
               <CardBody className={'grid gap-4'}>
