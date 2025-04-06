@@ -116,7 +116,7 @@ export function HomePage() {
 
   return (
     <div className={'min-h-screen w-screen bg-gray-100 grid'}>
-      <div className='bg-primary-main py-10 h-full flex items-center justify-center'>
+      <div className='bg-gradient-to-bl from-secondary-light to-primary-light py-24 h-full flex items-center justify-center'>
         <PageContainer >
           <div className='mt-top-bar-height flex items-center gap-4 justify-center'>
             <img src='/assets/home_img.svg' className='h-42' />
