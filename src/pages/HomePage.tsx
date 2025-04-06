@@ -134,14 +134,14 @@ export function HomePage() {
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
 
-          <div className='flex items-center justify-between my-10 gap-7'>
+          <div className='grid grid-cols-4 my-10 gap-4'>
             {
               Array.from({ length: 4 }).map((_, i) => (
                 <Card key={i}>
                   <CardBody className='grid gap-2'>
-                    <img className='h-52' src='/assets/gl_1.png' />
-                    <p className='font-semibold text-center'>Judul 3</p>
-                    <p className='text-gray-600 text-center'>Description 1</p>
+                    <img className='w-full aspect-square' src='/assets/gl_1.png' />
+                    <p className='font-semibold '>Judul 3</p>
+                    <p className='text-gray-600 '>Description 1</p>
                   </CardBody>
                 </Card>
               ))
