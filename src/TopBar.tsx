@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 export function TopBar() {
   const location = useLocation()
   return (
-    <div className={`h-top-bar-height border-b absolute ${location.pathname != "/" ? " bg-primary-main" : " bg-transparent"}  top-0  border-none w-screen flex items-center justify-between px-10`}>
+    <div className={`h-top-bar-height border-b absolute ${location.pathname != "/" ? " bg-primary-main" : " bg-transparent"}  top-0 text-white  border-none w-screen flex items-center justify-between px-10`}>
       <h1 className={'tracking-wide'}>GLAUCOMA PREDICTION</h1>
 
       <div className="flex gap-4">
