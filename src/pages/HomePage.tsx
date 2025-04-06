@@ -4,6 +4,7 @@ import Button from '../components/Button.tsx';
 import { Card, CardBody } from '../components/Card.tsx';
 import PageContainer from '../components/PageContainer.tsx';
 import { SpinnerLoading } from '../components/SpinnerLoading.tsx';
+import Divider from '../components/Divider.tsx';
 
 interface IRes {
   confidence: number;
@@ -116,13 +117,13 @@ export function HomePage() {
 
   return (
     <div className={'min-h-screen w-screen bg-gray-100 grid'}>
-      <div className='bg-gradient-to-bl from-secondary-light to-primary-light py-24 h-full flex items-center justify-center'>
+      <div className='bg-gradient-to-bl from-secondary-light to-primary-light py-10 h-full flex items-center justify-center'>
         <PageContainer >
           <div className='mt-top-bar-height flex items-center gap-4 justify-center'>
             <img src='/assets/home_img.svg' className='h-42' />
             <div>
               <p className='text-4xl uppercase font-semibold text-white '>Glaucoma Clasification</p>
-              <p className='text-white'>HELLO WORLD</p>
+              <p className='text-white'>Sebuah demo model prediksi glaucoma berbasis Deep Learning              </p>
             </div>
           </div>
 
@@ -130,23 +131,49 @@ export function HomePage() {
       </div>
       <PageContainer>
         <div className={'p-16 grid  gap-4 pt-24'}>
-          <p className='font-semibold text-4xl'>Judul 1</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <div>
+            <p className='font-semibold text-4xl'>Apa itu glaucoma?          </p>
+            <p>
+              Glaucoma adalah penyakit mata yang merusak saraf optik, biasanya disebabkan oleh tekanan tinggi di dalam bola mata (intraocular pressure/IOP). Saraf optik adalah bagian penting dari sistem penglihatan karena mengirimkan informasi dari mata ke otak. Jika saraf ini rusak, penglihatan bisa menurun dan bahkan menyebabkan kebutaan permanen.
 
 
-          <div className='grid grid-cols-4 my-10 gap-4'>
-            {
-              Array.from({ length: 4 }).map((_, i) => (
-                <Card key={i}>
-                  <CardBody className='grid gap-2'>
-                    <img className='w-full aspect-square' src='/assets/gl_1.png' />
-                    <p className='font-semibold '>Judul 3</p>
-                    <p className='text-gray-600 '>Description 1</p>
-                  </CardBody>
-                </Card>
-              ))
-            }
+            </p>
+          </div>
+          <div className='mt-6'>
+            <p className='font-semibold text-4xl'>Tentang Aplikasi Ini          </p>
+            <p>
+              Aplikasi ini merupakan demo dari model klasifikasi glaucoma menggunakan arsitektur deep learning ResNet50. Model ini dilatih untuk mengidentifikasi dan mengklasifikasikan kondisi mata berdasarkan citra fundus (gambar retina) ke dalam beberapa kategori, termasuk tahap awal (early stage) glaucoma. Tujuan dari aplikasi ini adalah untuk membantu eksplorasi dan pemahaman teknologi deteksi dini glaucoma menggunakan kecerdasan buatan.
 
+            </p>
+          </div>
+
+
+          <div>
+            <h1 className=' text-3xl mt-10 font-semibold'>Contoh Gambar Retina</h1>
+            <p>Berikut adalah contoh gambar retina dari dataset yang digunakan. Gambar ini digunakan untuk melatih dan menguji performa model prediksi:
+            </p>
+            <div className='grid grid-cols-2 my-10 gap-4'>
+              <Card >
+                <CardBody className='flex gap-4 items-center'>
+                  <img className='w-40 aspect-square' src='/assets/gl_1.png' />
+                  <div>
+                    <p className='font-semibold text-3xl '>Retina Normal</p>
+                    <p className='text-gray-600 text-xl '> Tidak ditemukan tanda-tanda glaucoma.</p>
+                  </div>
+
+                </CardBody>
+              </Card>
+              <Card >
+                <CardBody className='flex gap-4 items-center'>
+                  <img className='w-40 aspect-square' src='/assets/gl_1.png' />
+                  <div>
+                    <p className='font-semibold text-3xl '>Retina dengan Glaucoma</p>
+                    <p className='text-gray-600 text-xl '>Tampak perubahan pada optic disc yang menjadi indikasi glaucoma.</p>
+                  </div>
+
+                </CardBody>
+              </Card>
+            </div>
           </div>
 
           <div>
@@ -154,8 +181,14 @@ export function HomePage() {
               <CardBody className={'grid gap-4'}>
                 <div>
                   <h1 className={'text-2xl'}>Prediction</h1>
+                  <p>Unggah gambar retina untuk melihat hasil prediksi dari model kami. Model akan mengklasifikasikan gambar ke dalam salah satu kategori:
+                  </p>
                 </div>
+              </CardBody>
+              <Divider />
+              <CardBody>
                 {response ? responseCard() : inputCard()}
+
               </CardBody>
             </Card>
           </div>
