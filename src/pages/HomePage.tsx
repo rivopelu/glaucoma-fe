@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import Button from '../components/Button.tsx';
 import { Card, CardBody } from '../components/Card.tsx';
 import { SpinnerLoading } from '../components/SpinnerLoading.tsx';
+import PageContainer from '../components/PageContainer.tsx';
 
 interface IRes {
   confidence: number;
@@ -115,18 +116,32 @@ export function HomePage() {
 
   return (
     <div className={'min-h-screen w-screen bg-gray-100 grid'}>
-      <div className={'p-16 grid  gap-4 pt-24'}>
-        <div>
-          <Card>
-            <CardBody className={'grid gap-4'}>
-              <div>
-                <h1 className={'text-2xl'}>Prediction</h1>
-              </div>
-              {response ? responseCard() : inputCard()}
-            </CardBody>
-          </Card>
-        </div>
+      <div className='bg-primary-main h-full flex items-center justify-center'>
+        <PageContainer >
+          <div className='mt-top-bar-height flex items-center gap-4 justify-center'>
+            <img src='/assets/home_img.svg' className='h-42' />
+            <div>
+              <p className='text-4xl uppercase font-semibold text-white '>Glaucoma Clasification</p>
+              <p className='text-white'>HELLO WORLD</p>
+            </div>
+          </div>
+
+        </PageContainer>
       </div>
+      <PageContainer>
+        <div className={'p-16 grid  gap-4 pt-24'}>
+          <div>
+            <Card>
+              <CardBody className={'grid gap-4'}>
+                <div>
+                  <h1 className={'text-2xl'}>Prediction</h1>
+                </div>
+                {response ? responseCard() : inputCard()}
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </PageContainer>
     </div>
   );
 }
